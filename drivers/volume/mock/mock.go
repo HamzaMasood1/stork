@@ -287,7 +287,7 @@ func (m Driver) GetPodVolumes(podSpec *v1.PodSpec, namespace string, includePend
 }
 
 // OwnsPVCForBackup returns true because it owns all PVCs created by tests
-func (m *Driver) OwnsPVCForBackup(coreOps core.Ops, pvc *v1.PersistentVolumeClaim, cmBackupType string, crBackupType string, blType storkapi.BackupLocationType) bool {
+func (m *Driver) OwnsPVCForBackup(coreOps core.Ops, pvc *v1.PersistentVolumeClaim, cmBackupType string, crBackupType string) bool {
 	return m.OwnsPVC(coreOps, pvc)
 }
 
